@@ -1,0 +1,1 @@
+"""Custom component to return DS18B20 temperature"""

@@ -1,8 +1,0 @@
-{
-  "domain": "ds18b20",
-  "name": "DS18B20 Temerature Sensor",
-  "documentation": "https://github.com/home-assistant/example-custom-config/",
-  "dependencies": [],
-  "codeowners": ["jpcaldwell30"],
-  "requirements": []
-}

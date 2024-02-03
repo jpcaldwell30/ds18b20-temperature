@@ -5,10 +5,11 @@ import os
 import glob
 import time
 
-def setup_platform(hass, config, add_entities, discovery_info=None):
-    """Set up the sensor platform."""
-    add_entities([DS18B20Sensor()])
+DOMAIN = "ds18b20_temperature"
 
+def setup_platform(hass, config, add_entities, discovery_info=None) -> None:
+    """Set up the DS18B20 sensor platform."""
+    add_entities([DS18B20Sensor()])
 
 class DS18B20Sensor(RestoreEntity):
     """Representation of a Sensor."""
@@ -60,4 +61,3 @@ class DS18B20Sensor(RestoreEntity):
             temp_f = temp_c * 9.0 / 5.0 + 32.0
             temp_f = round(temp_f, 2)
         return str(temp_f)
-	

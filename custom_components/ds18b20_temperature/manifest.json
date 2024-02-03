@@ -1,0 +1,10 @@
+{
+  "domain": "ds18b20_temperature",
+  "name": "DS18B20 Temerature Sensor",
+  "documentation": "https://github.com/jpcaldwell30/ds18b20_temperature",
+  "iot_class": "local_polling",
+  "dependencies": [],
+  "codeowners": ["@jpcaldwell30"],
+  "requirements": [],
+  "version": "0.1.0"
+}
