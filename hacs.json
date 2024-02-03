@@ -1,5 +1,5 @@
 {
-  "name": "DS18B20 Temperature Sensor",
+  "name": "DS18B20 Temperature",
   "render_readme": true,
   "iot_class": "local_polling",
   "homeassistant": "2023.10.0"
