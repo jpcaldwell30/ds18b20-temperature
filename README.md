@@ -1,6 +1,6 @@
 # DS18B20 Temperature Sensor
 
-Reads the temperature using a DS18B20 sensor
+Reads the temperature using a DS18B20 temperature sensor
 
 ### Installation
 
@@ -11,5 +11,5 @@ Add the following to your `configuration.yaml` file:
 ```yaml
 # Example configuration.yaml entry
 sensor:
-  platform: DS18B20
+  platform: ds18b20_temperature
 ```
