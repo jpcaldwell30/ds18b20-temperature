@@ -18,6 +18,8 @@ or...
 
 Copy this folder to `<config_dir>/custom_components/ds18b20_temperature`.
 
+### Example configuration.yaml entry
+
 Add the following to your `configuration.yaml` file:
 
 ```yaml
