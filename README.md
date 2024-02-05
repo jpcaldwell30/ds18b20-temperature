@@ -1,6 +1,6 @@
 # DS18B20 Temperature Sensor
 
-Reads the temperature using a DS18B20 temperature sensor
+Reads the temperature using a DS18B20 temperature sensor connected to a Raspberry Pi
 
 ## Installation
 [![hacs_badge](https://img.shields.io/badge/HACS-Custom-orange.svg?style=for-the-badge)](https://github.com/hacs/integration)
