@@ -21,7 +21,8 @@ class DS18B20Sensor(RestoreEntity):
         base_dir = '/sys/bus/w1/devices/'
         device_folder = glob.glob(base_dir + '28*')[0]
         self.device_file = device_folder + '/w1_slave'   
-        self._state = None     
+        self._state = None
+        self._last_valid_state = None
 
     @property
     def name(self):
@@ -40,7 +41,10 @@ class DS18B20Sensor(RestoreEntity):
 
     def update(self):
         """Fetch new state data for the sensor."""
-        self._state = self._tempcheck()
+        new_state = self._tempcheck()
+        if self._last_valid_state is None or abs(float(new_state) - float(self._last_valid_state)) <= 20:
+            self._state = new_state
+            self._last_valid_state = new_state
 
     def read_temp_raw(self):
         f = open(self.device_file, 'r')
