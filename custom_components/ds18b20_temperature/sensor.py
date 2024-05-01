@@ -1,5 +1,6 @@
 """Platform for sensor integration."""
 from homeassistant.helpers.restore_state import RestoreEntity
+from homeassistant.components.sensor import SensorDeviceClass
 
 import os
 import glob
@@ -23,6 +24,7 @@ class DS18B20Sensor(RestoreEntity):
         self.device_file = device_folder + '/w1_slave'   
         self._state = None
         self._last_valid_state = None
+        self._attr_device_class = SensorDeviceClass.ILLUMINANCE
 
     @property
     def name(self):
@@ -38,11 +40,11 @@ class DS18B20Sensor(RestoreEntity):
     def unit_of_measurement(self):
         """Return the unit of measurement."""
         return "°F"
-
+        
     @property
     def icon(self):
         """Return the icon for the sensor."""
-        return "mdi:home-thermometer"
+        return "mdi:home-thermometer" 
 
     def update(self):
         """Fetch new state data for the sensor."""
