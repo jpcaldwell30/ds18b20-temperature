@@ -39,6 +39,11 @@ class DS18B20Sensor(RestoreEntity):
         """Return the unit of measurement."""
         return "°F"
 
+    @property
+    def icon(self):
+        """Return the icon for the sensor."""
+        return "mdi:home-thermometer"
+
     def update(self):
         """Fetch new state data for the sensor."""
         new_state = self._tempcheck()
